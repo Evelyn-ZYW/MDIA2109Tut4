@@ -1,0 +1,21 @@
+.custom_button_box {
+  /* background-color: #DAB; */
+  display:inline-flex;
+  border-radius:5px;
+  padding:10px;
+  font-weight:bolder;
+  color:#FFF;
+  cursor:pointer;
+  box-shadow:1px 1px 5px #DAB;
+  margin:5px;
+}
+
+.custom_button_box:active{
+  background-color:#999;
+}
+
+/* no more highlight of the texts on the button */
+.custom_button_box_inner::selection {
+  background:none;
+  color:none;
+}
