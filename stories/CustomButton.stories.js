@@ -3,58 +3,92 @@ import CustomButton from '../comps/CustomButton';
 import Header from '../comps/Header';
 
 export default {
-  title:"Custom Button",
-  component:CustomButton
+  title: "Custom Button",
+  component: CustomButton
 };
+
 
 export const MyCustomButton = () => <CustomButton />
 
+
 export const PageWithCustomButtons = () => <div>
   <Header
-   fontSize={15}
-   color="ABC"
-   onMouseOver={CancelClick}
-  />
-  
-  <Header
-   fontSize={25}
-   color="red"
-   onMouseOver={OkClick}
+    text="This is going to be fun"
+    fontSize={25}
+    color="pink"
+    onMouseOver={OneFun}
   />
 
-  <CustomButton 
-  color="#999" 
-  text="Cancel" 
-  onClick={CancelClick}
+  <Header
+    text="This is going to be fun fun"
+    fontSize={21}
+    color="lightblue"
+    onMouseOver={TwoFun}
   />
-  <CustomButton 
-  color="#3F5" 
-  text="OK" 
-  onClick={OkClick}
+
+  <Header
+    text="This is going to be fun fun fun"
+    fontSize={18}
+    color="purple"
+    onMouseOver={ThreeFun}
   />
-  <CustomButton 
-  color="#F3F" 
-  text="Submit" 
-  onClick={SubClick}
+
+  <Header
+    text="This is going to be fun fun fun fun"
+    fontSize={15}
+    color="lightgreen"
+    onMouseOver={FourFun}
   />
-  <CustomButton 
-  text="Menu" 
-  onClick={MenuClick}
+
+  <CustomButton
+    color="#999"
+    text="Cancel"
+    onClick={CancelClick}
+  />
+  <CustomButton
+    color="#3F5"
+    text="OK"
+    onClick={OkClick}
+  />
+  <CustomButton
+    color="#F3F"
+    text="Submit"
+    onClick={SubClick}
+  />
+  <CustomButton
+    text="Menu"
+    onClick={MenuClick}
   />
 </div>
 
-function CancelClick(){
+function CancelClick() {
   alert("cancel");
 }
 
-function OkClick(){
+function OkClick() {
   alert("OK");
 }
 
-function SubClick(){
+function SubClick() {
   alert("Submit");
 }
 
-function MenuClick(){
+function MenuClick() {
   alert("Menu");
+}
+
+function OneFun() {
+  alert("Are you sure?");
+}
+
+function TwoFun() {
+  alert("No you have no idea.");
+}
+
+function ThreeFun() {
+  alert("Ok stoooooooooop");
+}
+
+function FourFun() {
+  alert("lolololololololol");
 }
