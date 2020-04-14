@@ -5,6 +5,7 @@
   flex-direction: column;
   padding:10px;
   border-radius: 10px;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .chat_user {

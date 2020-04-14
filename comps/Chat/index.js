@@ -4,6 +4,8 @@ import './chat.css';
 
 import Header from '../Header';
 
+import {GiSharpSmile} from 'react-icons/gi';
+
 const defaultImg = require('./default.png');
 
 const Chat = ({ msg, img, name, backgroundColor }) => <div
@@ -15,6 +17,7 @@ const Chat = ({ msg, img, name, backgroundColor }) => <div
   </div>
   <div className="chat_msg">
     {msg}
+    <GiSharpSmile />
   </div>
 </div>;
 

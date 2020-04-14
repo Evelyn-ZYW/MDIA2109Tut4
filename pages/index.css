@@ -1,0 +1,11 @@
+#mainapp {
+  position:relative !important;
+  right:0;
+  opacity: 1;
+  transition:opacity 1s, right 1s;
+  font-family: 'Boogaloo', cursive;
+}
+
+body, html {
+  overflow-x: hidden;
+}

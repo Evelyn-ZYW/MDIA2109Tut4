@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './chatpage.css';
 import Chat from '../../comps/Chat';
 import CustomButton from '../../comps/CustomButton';
 import Input from '../../comps/Input';
 import Header from '../../comps/Header';
+
 
 /*
 var welcome = "Welcome to my App!"
@@ -20,7 +21,13 @@ const ChatPage = ({ }) => {
   const [color, setColor] = useState("#F1C7B5");
   const [text, setText] = useState("I'm a plain button");
 
-  return <div>
+  useEffect(() => {
+    setTimeout(() => {
+      document.querySelector("#chatpage").style.left = "30%";
+    }, 50)
+  }, []);
+
+  return <div id="chatpage">
     <div id="welcome">
       <Header fontSize={32} text={welcome} />
     </div>

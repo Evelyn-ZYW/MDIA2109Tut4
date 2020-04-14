@@ -1,10 +1,19 @@
+import { useEffect } from 'react';
 import CustomButton from '../../comps/CustomButton';
 import Header from '../../comps/Header';
 import './contact.css';
 
-const Contact = () => <div>
-  <Header text="Contact me!" fontSize="24"/>
-  <CustomButton text="email" />
-</div>
 
+const Contact = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      document.querySelector("#contactpage").style.left = "30%";
+    }, 50)
+  }, []);
+
+  return <div id="contactpage">
+    <Header text="Contact me!" fontSize="24" />
+    <CustomButton text="email" />
+  </div>
+}
 export default Contact;

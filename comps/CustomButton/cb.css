@@ -8,6 +8,7 @@
   cursor:pointer;
   box-shadow:1px 1px 5px #DAB;
   margin:5px;
+  font-family: 'Walter Turncoat', cursive;
 }
 
 .custom_button_box:active{
