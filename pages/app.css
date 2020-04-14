@@ -1,0 +1,6 @@
+#mainapp {
+  position:relative !important;
+  right:0;
+  opacity: 1;
+  transition:opacity 1s, right 1s;
+}
