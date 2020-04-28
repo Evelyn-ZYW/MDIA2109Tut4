@@ -5,6 +5,9 @@ import CustomButton from '../../comps/CustomButton';
 import Input from '../../comps/Input';
 import Header from '../../comps/Header';
 
+import {data, ChangeData} from '../data';
+
+console.log("doesn't reload, loads only once", data);
 
 /*
 var welcome = "Welcome to my App!"
@@ -14,7 +17,10 @@ function setWelcome(){
 }
 */
 
+
+
 const ChatPage = ({ }) => {
+  console.log("loads everytime I use the component", data);
   const [welcome, setWelcome] = useState("welcome to my App!");
   const [msg, setMsg] = useState("Pls type something!");
   const [resp, setResp] = useState("Let me respond.");
@@ -60,10 +66,16 @@ const ChatPage = ({ }) => {
 }
 
 function CheckResponse(inp) {
+  var num = data.numClicks;
+  ChangeData({
+    lastaction:"Clicked send",
+    numClicks: num+1
+  });
   switch (inp.toLowerCase()) {
     case "hi":
       return "I love pie";
-
+    case "how are you?":
+      return "great!";
     default:
       return "I don't understand what are you trying to say";
   }

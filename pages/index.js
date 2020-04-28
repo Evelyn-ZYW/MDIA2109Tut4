@@ -5,9 +5,16 @@ import {GiTreeBranch} from 'react-icons/gi';
 import {IoMdContacts} from 'react-icons/io';
 import './index.css';
 
+import {data, ChangeData} from './data';
+
+console.log("doesn't reload, loads only once", data);
+
 
 function ClickIndex() {
-
+  ChangeData({
+    lastaction:"Went to Chat!",
+    numClick:0
+  })
   document.querySelector("#mainapp").style.right = "100%";
   setTimeout(function(){
     Router.push("/ChatPage");
